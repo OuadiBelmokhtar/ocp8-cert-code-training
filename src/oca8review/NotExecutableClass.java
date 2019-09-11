@@ -9,6 +9,10 @@ public class NotExecutableClass {
 
 	public static Integer getInt() {
 		int i = 10;
+		
 		return i; // Autoboxing i
+		
 	}
+	
+	
 }
