@@ -21,12 +21,24 @@ public class CoffeeTest1 {
 		//
 
 		Coffee drink1 = new Coffee();
-		drink1.size = CoffeeSize.HUGE;
+		drink1.size = CoffeeSize.HUGE;// porteur de donnees
 		Coffee drink2 = new Coffee();
 		drink2.size = CoffeeSize.BIG;
 		System.out.println(drink1.size.getMls()); // prints 10
+		System.out.println(drink1.size.getCoverType()); // prints B
 
-		for()
-		System.out.println(CoffeeSize.HUGE + " " + hugeMl + " mls");
+		//
+		System.out.println("*Affichage des enums via boucle");
+		for (CoffeeSize cs : CoffeeSize.values())
+			System.out.println(cs); // prints all enums
+		//
+		System.out.println("*Affichage des Mls des enums");
+		for (CoffeeSize cs: CoffeeSize.values())
+			System.out.println(cs +" "+ cs.getMls());
+		//
+		System.out.println("*Affichage via indice");
+		System.out.println(CoffeeSize.values()[0]); // print BIG
+		
+		// System.out.println(CoffeeSize.HUGE + " " + hugeMl + " mls");
 	}
 }
