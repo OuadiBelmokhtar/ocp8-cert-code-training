@@ -30,4 +30,8 @@ public enum CoffeeSize {
 		return coverType;
 	}
 
+	// Overriding toString() from Enum class
+	public String toString() {
+		return "[" + mls + ", " + coverType + "]";
+	}
 }
