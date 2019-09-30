@@ -10,7 +10,7 @@ static int A;
 		byte b2 = i2; // implicit narrowing, its ok only if i2 is a compile-time constant
 		System.out.println(b2);
 		int i3 = getWidenByte();
-		System.out.println(i3);
+		System.out.println(i3); 
 		byte b3 = getNarrowedInt();
 		System.out.println(b3);
 	}
