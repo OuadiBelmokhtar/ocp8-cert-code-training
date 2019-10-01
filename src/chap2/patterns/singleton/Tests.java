@@ -1,4 +1,4 @@
-package chap2.patterns;
+package chap2.patterns.singleton;
 
 public class Tests {
 	public static void main(String[] args) {

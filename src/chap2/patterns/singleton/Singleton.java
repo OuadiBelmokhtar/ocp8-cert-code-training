@@ -1,4 +1,4 @@
-package chap2.patterns;
+package chap2.patterns.singleton;
 
 // Impl using Lazy init and creation code look
 public class Singleton {
