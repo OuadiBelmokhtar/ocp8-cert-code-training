@@ -1,4 +1,4 @@
-package chap2.patterns.factory;
+package chap2.patterns.staticfactory;
 
 public class AppFactory {
 

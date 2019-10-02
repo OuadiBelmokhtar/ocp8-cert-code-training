@@ -1,4 +1,4 @@
-package chap2.patterns.factory;
+package chap2.patterns.factorymethod;
 
 public class TextEditor implements App {
 	public void open(String fileName) {
