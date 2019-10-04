@@ -2,8 +2,8 @@ package chap2.patterns.daofactory;
 
 public class Client {
 	public static void main(String[] args) {
+		
 		Employee emp = new Employee();
-
 		emp.setName("Harry");
 		emp.setAge(39);
 		emp.setAddress("UK");
