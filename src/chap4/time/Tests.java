@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalAdjusters;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -43,6 +44,7 @@ public class Tests {
 		ZonedDateTime zDateTime = ZonedDateTime.of(localDateTime1, casa);
 		System.out.println(casa.getRules().isDaylightSavings(zDateTime.toInstant())); // false, by Oct 22, 2019
 	
+		
 	
 	}
 }
