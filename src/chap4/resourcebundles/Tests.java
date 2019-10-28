@@ -8,5 +8,6 @@ public class Tests {
 		ResourceBundle rb = ResourceBundle.getBundle("Labels", new Locale(args[0]));
 		// ResourceBundle rb = ResourceBundle.getBundle("Labels", Locale.CANADA);
 		System.out.println(rb.getString("hello"));
+		System.out.println(Locale.getDefault()); // en_MA
 	}
 }
