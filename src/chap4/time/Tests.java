@@ -1,11 +1,14 @@
 package chap4.time;
 
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalAdjuster;
 import java.time.temporal.TemporalAdjusters;
+import java.time.temporal.TemporalUnit;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -44,7 +47,12 @@ public class Tests {
 		ZonedDateTime zDateTime = ZonedDateTime.of(localDateTime1, casa);
 		System.out.println(casa.getRules().isDaylightSavings(zDateTime.toInstant())); // false, by Oct 22, 2019
 	
-		
+		LocalDateTime ldt=LocalDateTime.now();
+		System.out.println(ldt.with(TemporalAdjusters.next(DayOfWeek.MONDAY)));
+
+
+	
+
 	
 	}
 }
