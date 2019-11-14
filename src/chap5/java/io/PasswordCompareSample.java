@@ -7,6 +7,7 @@ import java.util.Arrays;
 public class PasswordCompareSample {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		Console console = System.console();
+		
 		if (console == null) {
 			throw new RuntimeException("Console not available");
 		} else {
