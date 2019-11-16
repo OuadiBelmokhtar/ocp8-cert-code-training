@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Tests1 {
+public class CreatingFileDirectories {
 	public static void main(String[] args) {
 
 		try {
