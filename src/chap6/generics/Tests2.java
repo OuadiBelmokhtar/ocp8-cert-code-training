@@ -22,15 +22,19 @@ public class Tests2 {
 		return list.get(0);
 	}
 
-	// you cannot use ? for declaring the parameterized type of the mtd
-	// You have to use a letter instead
-	<?extends Animal>
-
-	void m4(T o) {
+	// you cannot use ? for declaring the parameterized type of the mtd.
+	// ? is used only for declaring reference variables/params
+	// Use a legal identifier(T) instead
+	<? extends Animal> void m4(List<? extends Animal> list) {
 
 	}
 
 	<T extends Animal> void m5(T o) {
+
+	}
+	
+	// only extends is allowed here
+	<T super Animal> void m6(T o) {
 
 	}
 
