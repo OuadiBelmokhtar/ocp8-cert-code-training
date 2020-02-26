@@ -1,6 +1,8 @@
 package chap6.generics;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Tests1 {
@@ -24,9 +26,10 @@ public class Tests1 {
 
 //		
 
+		
 		Object[] os = new Integer[3];
 		os[0] = new Integer(10);
-		os[1] = new String("ok");// throws ArrayStoreException at RT
+		os[1] = new String("ok");// Works at CT, but throws ArrayStoreException at RT
 		System.out.println(os[0] + " " + os[1]);
 
 		List list = new ArrayList();
