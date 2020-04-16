@@ -39,5 +39,7 @@ public class Tests1 {
 //		System.out.println(s);
 		boolean b= false || false || false;
 		System.out.println(b);
+		String s="abc;def;ghi";
+		System.out.println(s.split(";")[0]);
 	}
 }
