@@ -12,3 +12,4 @@ public class MyThread extends Thread {
 		System.out.println("String in run is "+s);
 	}
 }
+
