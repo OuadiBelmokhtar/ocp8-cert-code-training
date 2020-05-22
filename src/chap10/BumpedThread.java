@@ -5,6 +5,7 @@ public class BumpedThread {
 		Runnable runnableJob = () -> {
 			for (int i = 1; i < 400; i++) {
 				System.out.println("Run by " + Thread.currentThread().getName() + ", i is " + i);
+				
 			}
 		};
 
@@ -22,3 +23,9 @@ public class BumpedThread {
 		worker3.start();
 	}
 }
+
+//try {
+//	Thread.sleep(1); // sleep the currently running thread(currently executing the job)
+//} catch (InterruptedException e) {
+//	e.printStackTrace();
+//}
