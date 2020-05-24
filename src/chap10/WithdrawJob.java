@@ -25,7 +25,7 @@ public class WithdrawJob implements Runnable {
 
 	}
 
-	public void makeWithdrawal(int amt) {
+	private synchronized void makeWithdrawal(int amt) {
 
 		if (account.getBalance() >= amt) {
 			System.out.println(Thread.currentThread().getName() + " is going to withdraw. Balance BEFORE withdrawal: "
