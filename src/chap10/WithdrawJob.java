@@ -16,7 +16,7 @@ public class WithdrawJob implements Runnable {
 	@Override
 	public void run() {
 		for (int i = 0; i < 5; i++) {
-			makeWithdrawal(10);
+			this.makeWithdrawal(10);
 
 			if (account.getBalance() < 0) {
 				System.err.println("The account is overdrawn !");
@@ -35,7 +35,12 @@ public class WithdrawJob implements Runnable {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			account.withdraw(amt);
+			
+			// account object is already declared as an instance variable 
+			//synchronized (account) {
+				account.withdraw(amt);
+			//}
+			
 			System.out.println(Thread.currentThread().getName()
 					+ " completes the withdrawal. New balance AFTER withdrawal: " + account.getBalance());
 		} else {
