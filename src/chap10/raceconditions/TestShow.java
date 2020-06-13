@@ -29,6 +29,7 @@ public class TestShow {
 		tGetSeats1.start();
 		tGetSeats2.start();
 		
+		
 	}
 
 	public void tiketAgentBooks(String seatName) {

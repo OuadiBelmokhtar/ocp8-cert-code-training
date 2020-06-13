@@ -13,12 +13,12 @@ public class Exercice10_2JobWorker extends Thread {
 
 		synchronized (letter) {
 			for (int i = 0; i < 100; i++) {
-				// noter bien l affichage du nom du Thread en cours d execution pr un affichage claire
-				System.out.print(Thread.currentThread().getName()+", "+letter);
+				// noter bien l affichage du nom du Thread en cours d execution
+				// pr un affichage claire
+				System.out.print(Thread.currentThread().getName() + ", " + letter);
 				try {
 					Thread.sleep(10);
 				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
