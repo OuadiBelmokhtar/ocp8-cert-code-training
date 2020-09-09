@@ -16,7 +16,7 @@ public class Show {
 		return INSTANCE;
 	}
 
-	private  Show() {
+	private Show() {
 		System.out.println("Show constructor is called");
 		availableSeats = new HashSet<String>();
 		availableSeats.add("1A");

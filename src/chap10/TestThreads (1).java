@@ -1,9 +1,11 @@
 package chap10;
 
+import java.util.Arrays;
+
 public class TestThreads {
 
 	public static void main(String[] args) {
-		// Define a separate job(run()) using Runnable and Lambda
+		// Creating a separate job
 		Runnable runnableJob = () -> {
 			for (int i = 1; i < 6; i++) {
 				System.out.println("Runnable running " + i);
@@ -19,6 +21,4 @@ public class TestThreads {
 		System.out.println("Thread name within main(): " + Thread.currentThread().getName());
 
 	}
-
-	
 }
