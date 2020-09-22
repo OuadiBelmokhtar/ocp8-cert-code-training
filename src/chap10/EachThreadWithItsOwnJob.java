@@ -30,10 +30,16 @@ public class EachThreadWithItsOwnJob {
 		};
 		
 		Thread worker1 = new Thread(job1, "worker1");
-		Thread worker2 = new Thread(job1, "worker2");
-		Thread worker3 = new Thread(job1, "worker3");
+		Thread worker2 = new Thread(job2, "worker2");
+		Thread worker3 = new Thread(job3, "worker3");
 		worker1.start();
 		worker2.start();
 		worker3.start();
+		
+		
+	}
+	
+	synchronized void  m1() {
+		
 	}
 }
