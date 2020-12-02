@@ -1,15 +1,14 @@
 package chap12;
 
+import static java.lang.System.out;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import static java.lang.System.*;
 
-public class AllBobsCustomers {
+public class IncresePriceOfHardcoverBooks {
 	public static void main(String[] args) {
-
 		String URL = "jdbc:postgresql://localhost:5432/booksellerdb"; // port is optional
 		String userName = "postgres";
 		String password = "postgrespass";
@@ -17,18 +16,12 @@ public class AllBobsCustomers {
 			Connection conn = DriverManager.getConnection(URL, userName, password);
 			out.println("Connected to the PostgreSQL server successfully.");
 			Statement stmt = conn.createStatement();
-			String query="SELECT * FROM Customer";
-			ResultSet rs = stmt.executeQuery(query);
-			while (rs.next()) {
-				out.print(rs.getInt("CustomerID") + " ");
-				out.print(rs.getString("firstname") + " ");
-				out.print(rs.getString("lastname") + " ");
-				out.print(rs.getString("email") + " ");
-				out.println(rs.getString("phone") + " ");
-			}
+			String query = "UPDATE Book SET UnitPrice=8.95 WHERE UnitPrice<13 AND Format='Hardcover'";
+			// returns nbr of rows updated
+			int nbrAffectedRows = stmt.executeUpdate(query);
+			out.println(nbrAffectedRows + " rows was successfuly updated: ");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-
 	}
 }
