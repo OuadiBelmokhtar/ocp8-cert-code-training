@@ -34,3 +34,5 @@ INSERT INTO Book VALUES(987,'The House of the Scorpion','2012-03-02','Paperback'
 INSERT INTO Book VALUES(332,'How to Train Your Dragon','2012-03-02','Hardcover',13.95);
 
 UPDATE Book SET UnitPrice=8.95 WHERE UnitPrice<8.95 AND Format='Hardcover';
+
+- Afficher le nom de l'auteur et le(s) book qu'il a écrit.
