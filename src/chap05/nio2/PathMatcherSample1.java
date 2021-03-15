@@ -21,7 +21,7 @@ public class PathMatcherSample1 {
 //		Path path1 = Paths.get("fich.txt/a/b/c"); // meme resultat si je commence avec /
 //		System.out.println(matcher.matches(path1)); // false
 
-		// Path path1 = Paths.get("/a/b/p.txt/c");
+		// Path path1 = Paths.get("/a/b/p.txt");
 
 
 	}

@@ -39,10 +39,11 @@ public class WriteReadTextFile {
 			fr.close();
 			
 			// Reading all lines
-//			String line = null;
-//			while ((line = br.readLine()) != null) { // When THERE IS NO DATA TO READ, readLine() returns a null
-//				System.out.println(line);
-//			}
+			String line = null;
+			// When THERE IS NO DATA TO READ, readLine() returns a null
+			while ((line = br.readLine()) != null) { 
+				System.out.println(line);
+			}
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

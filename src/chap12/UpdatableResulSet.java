@@ -28,11 +28,13 @@ public class UpdatableResulSet {
 			// reinitialiser la position du curseur
 			rs.beforeFirst();
 			while (rs.next()) {
-				
-				if (rs.getDouble("unitprice")  == 8.95) {
-					rs.updateDouble("unitprice", 12.95);
+
+				if (rs.getDouble("unitprice") == 12.95) {
+					rs.updateObject("unitprice", 8.95); // c possible d'utiliser updateObject() au lieu de
+														// updateDouble()
+
 					rs.updateRow();
-					
+
 				}
 			}
 			// reinitialiser la position du curseur

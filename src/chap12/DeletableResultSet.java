@@ -32,6 +32,7 @@ public class DeletableResultSet {
 			
 			// reinitialiser la position du curseur
 			rs.beforeFirst();
+			// Afficher ttes les lignes
 			out.println("\n## All books after update");
 			while (rs.next()) {
 				out.println(rs.getString("title") + " " + rs.getFloat("unitprice"));

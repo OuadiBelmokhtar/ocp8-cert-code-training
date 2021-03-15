@@ -13,7 +13,7 @@ public class LoginConsole {
 		} else {
 			console.writer().println("User name: ");
 			name = console.readLine();
-			console.writer().println("Password ");
+			console.writer().println("Your Password ");
 			pwd = console.readPassword(); // inputed characters are not visible while typing
 			console.writer().println("Hello, " + name + ", your pwd is " + Arrays.toString(pwd));
 			
