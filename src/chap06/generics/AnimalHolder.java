@@ -13,15 +13,15 @@ public class AnimalHolder<T> {
 	}
 
 	public static void main(String[] args) {
-		AnimalHolder.<Dog>staticMtd(new Dog()); // (Dog) version
-		Dog[] dogs = new Dog[3];
-		AnimalHolder.<Dog[]>staticMtd(dogs); // (Dog[]) version
+		AnimalHolder.staticMtd(new Dog()); // (Dog) version
+		Dog[] dogs = new Dog[3]; 
+		AnimalHolder.staticMtd(dogs); // (Dog[]) version
 
 		AnimalHolder<Dog> ahd = AnimalHolder.getMe(new Dog());
 		AnimalHolder<Dog> ah = new AnimalHolder<Dog>();
 		ah.notStaticMtd(new Dog());// OK
 //		// The method staticMtd(Dog) is undefined for the type AnimalHolder
-//				AnimalHolder.staticMtd(new Dog()); // KO
+//		AnimalHolder.staticMtd(new Dog()); // KO
 	}
 
 	static <U> AnimalHolder<U> getMe(U u) {
@@ -35,7 +35,9 @@ public class AnimalHolder<T> {
 	}
 
 	// Cannot make a static reference to the non-static type T
-	// static void staticMtd(T t) {
+	static void staticMtd(T t) {
+	}
+
 	void notStaticMtd(T p) {
 	}
 
@@ -46,7 +48,10 @@ public class AnimalHolder<T> {
 	T[] arr2 = new T[3]; // Cannot create a generic array of T
 
 	void m1(T p) {
-		if (p instanceof Animal) { // OK. But T instanceof Animal NO
+		if (p instanceof T) {
+			// Cannot perform instanceof check against type parameter T. Use its erasure
+			// Object instead since further generic type information will be erased at
+			// runtime
 		}
 	}
 

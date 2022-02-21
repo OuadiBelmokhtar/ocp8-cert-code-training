@@ -58,9 +58,7 @@ public class Tests2 {
 	}
 
 	// ONLY extends is allowed for declaring parameterized type
-	<T super Animal>
-
-	void m15(T o) {
+	<T super Animal> void m15(T o) {
 
 	}
 
@@ -71,9 +69,7 @@ public class Tests2 {
 	// you cannot use ? for declaring the parameterized type of the mtd.
 	// ? is used only for declaring reference variables/params
 	// Use a legal identifier(T) instead
-	<?extends Animal>
-
-	void m17(List<? extends Animal> list) {
+	<? extends Animal> void m17(List<? extends Animal> list) {
 
 	}
 
@@ -92,9 +88,7 @@ public class Tests2 {
 	// Will not compile because the return type ISN'T actually a type.
 	// You are writing the method. You know what type it is supposed to return.
 	// You don’t get to specify this as a wildcard.
-	<T>
-
-	<T extends Animal> m20(List<? extends T> list) {
+	<T> <T extends Animal> m20(List<? extends T> list) {
 			
 	}
 

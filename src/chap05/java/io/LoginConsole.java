@@ -16,6 +16,7 @@ public class LoginConsole {
 			console.writer().println("Your Password ");
 			pwd = console.readPassword(); // inputed characters are not visible while typing
 			console.writer().println("Hello, " + name + ", your pwd is " + Arrays.toString(pwd));
+			console.format("Good By.");
 			
 		}
 	}

@@ -44,7 +44,8 @@ interface B extends A {
 }
 
 class TestClass implements B {
-	public void hello() {
+	public void test() {
+		hello();// valide. we are callign the inherited hello()
 		super.hello();// This is NOT valid.       
 		A.super.hello();// This is NOT valid because TestClass does not implement A directly.       
 		B.super.hello();// This is valid.    

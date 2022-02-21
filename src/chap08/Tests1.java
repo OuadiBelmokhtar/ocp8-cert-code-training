@@ -32,10 +32,14 @@ public class Tests1 {
 		});
 		
 		System.out.println("--- method reference ---");
-		listOfNames.forEach(System.out::println);
+		listOfNames.forEach(Tests1::testRef);
 
 		BiConsumer<Integer, Integer> biC = (a, b) -> System.out.println(a + b);
 		biC.accept(30, 40);
-	Comparator<T>
+	
+	}
+	
+	void testRef(String s) {
+		
 	}
 }
